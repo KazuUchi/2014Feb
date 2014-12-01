@@ -15,13 +15,6 @@ import folder_location
 
 def USD_open_for_STS(fol_n, fil_n, imagexsize, specxsize, datasize, specflag):
 
-
-    #fol_n = "/Users/kazuharu/Dropbox/R/2014Feb"; #01_12, 01_23, 02_04, 02_07
-    #fil_n = "u4tp0016"; #1-17, 18-48, 49-73, 74-
-    #imagexsize = 64
-    #specxsize = 64
-    #datasize = 512
-
     file_name = "%s/%s.usd" % (fol_n, fil_n);
     ifile = open(file_name, 'r')
     
@@ -62,21 +55,6 @@ def USD_open_for_STS(fol_n, fil_n, imagexsize, specxsize, datasize, specflag):
     #Page6: TOPO image back
     Im3b = load_image_from_usd_file(ifile, imagexsize);
 
-    #ifile.close()
-#    plt.figure()
-#    plt.subplot(2,3,1)
-#    plt.imshow(Im1f)    
-#    plt.subplot(2,3,2)
-#    plt.imshow(Im2f)    
-#    plt.subplot(2,3,3)
-#    plt.imshow(Im3f)    
-#    plt.subplot(2,3,4)
-#    plt.imshow(Im1b)    
-#    plt.subplot(2,3,5)
-#    plt.imshow(Im2b)    
-#    plt.subplot(2,3,6)
-#    plt.imshow(Im3b)    
-#    
     #####
     ##### Spectrum Part #####
     #####
@@ -159,9 +137,6 @@ def USD_open_for_STS(fol_n, fil_n, imagexsize, specxsize, datasize, specflag):
 
 #%%
 
-
-
-#fol_n = "/Users/kazuharu/Dropbox/R/2014Feb"; #01_12, 01_23, 02_04, 02_07
 fol_n = folder_location.location("dropbox") + "R/2014Feb"; #01_12, 01_23, 02_04, 02_07
 fil_n = "u4tp0013"; #1-17, 18-48, 49-73, 74-
 imagexsize = 512
